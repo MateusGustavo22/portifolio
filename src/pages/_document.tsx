@@ -5,6 +5,7 @@ export default function Document() {
     <Html lang="pt-BR">
       <Head>
         <link rel="icon" href="/assets/favicon.png" />
+        <title>Mateus Gustavo | Portifólio</title>
       </Head>
       <body>
         <Main />
