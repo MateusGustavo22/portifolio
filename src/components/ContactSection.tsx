@@ -8,6 +8,7 @@ import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import ConfirmCard from "./ConfirmCard";
 import ErrorCard from "./ErrorCard";
+import Loading from "./Loading";
 
 export default function ContactSection() {
   const [contactStatus, setContactStatus] = useState("");
@@ -50,6 +51,8 @@ export default function ContactSection() {
       email: data.email
     };
 
+    setContactStatus("LOADING");
+
     emailjs
       .send(
         "service_n8jocgl",
@@ -68,7 +71,7 @@ export default function ContactSection() {
   return (
     <div
       id="contact"
-      className="w-full h-max bg-[url('/background2.jpg')] bg-cover bg-center"
+      className="w-full h-max bg-[url('/assets/background2.jpg')] bg-cover bg-center"
     >
       <div className="w-full h-full pl-4 pr-4 pt-[96px] pb-[96px] display1:pt-[52px] display1:pb-[52px] display1:space-y-[32px] justify-center space-y-[64px] bg-[rgba(22,30,44,0.77)]">
         <span className="text-white block text-4xl display1:text-2xl text-center font-sans font-bold">
@@ -142,9 +145,9 @@ export default function ContactSection() {
               >
                 <div className="w-0 group-hover:w-full transition-all duration-300 h-full top-0 absolute rounded-md bg-color2"></div>
                 <div className="w-max h-max m-auto flex-row-reverse relative z-20 flex items-center">
-                  <BsSend size={18} />
+                  {contactStatus === "LOADING" ? null : <BsSend size={18} />}
                   <span className="text-white font-sans text-sm ml-2 mr-2">
-                    ENVIAR MENSAGEM
+                    {contactStatus === "LOADING" ? <Loading /> : "ENVIAR MENSAGEM"}
                   </span>
                 </div>
               </button>

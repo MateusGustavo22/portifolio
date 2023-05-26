@@ -27,7 +27,7 @@ export default function ErrorCard({ contactStatus, setContactStatus }: Props) {
       <div className="max-w-[320px] flex space-y-6 rounded-2xl flex-col items-center w-full p-8 shadow-3xl  bg-color5">
         <div className="w-20 h-20 mb-4 bg-[url('/assets/error.svg')] bg-center bg-cover bg-no-repeat "></div>
         <span className="font-sans text-center font-semibold text-white text-2xl">
-          O ENVIO FALHOU!😕
+          O ENVIO FALHOU!
         </span>
         <span className="font-sans text-center text-slate-300">
           Por favor, verifique se você preencheu os campos corretamente.

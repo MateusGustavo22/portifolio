@@ -1,3 +1,4 @@
+import Loading from "./Loading";
 import ProjectCard from "./ProjectCard";
 
 export default function ProjectSections() {
@@ -38,7 +39,7 @@ export default function ProjectSections() {
           link="https://starlink-clone.vercel.app/"
           description="Clone da página do starlink 100% responsiva com menu lateral utiliziando React e Tailwind. "
           image="/projects/image04.png"
-          tags={["React", "Tailwind"]}
+          tags={["Html","React", "Tailwind"]}
           github="https://github.com/MateusGustavo22/starlink-clone"
         />
       </div>

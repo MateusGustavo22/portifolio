@@ -7,7 +7,7 @@ export default function AboutSection() {
       id="about"
       className="w-full h-max flex pt-[96px] pb-[96px] display1:pt-[52px] display1:pb-[52px] bg-color5"
     >
-      <div className="max-w-[1400px] w-full display2:flex-col-reverse display2:items-center pl-8 pr-8 display1:pl-4 display1:pr-4 h-max m-auto flex justify-between">
+      <div className="max-w-[1400px] w-full display2:flex-col-reverse display2:items-center pl-8 pr-8 display1:pl-6 display1:pr-6 h-max m-auto flex justify-between">
         <div className="max-w-[700px] display2:max-w-[800px] space-y-8 w-full h-max">
           <div className="w-full h-max flex flex-col space-y-8">
             <span className="text-white font-sans font-semibold text-4xl">

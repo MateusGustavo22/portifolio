@@ -4,7 +4,7 @@ export default function InitialSection() {
   return (
     <div
       id="home"
-      className="w-full h-screen display1:h-[700px] bg-[url('/background1.jpg')] bg-cover bg-center"
+      className="w-full h-screen display1:h-[700px] bg-[url('/assets/background1.jpg')] bg-cover bg-center"
     >
       <div className="w-full h-full pl-4 pr-4 bg-[rgb(22,30,44,0.84)] ">
         <div className="max-w-[1600px] h-full m-auto flex items-center justify-center">

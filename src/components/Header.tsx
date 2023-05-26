@@ -61,7 +61,7 @@ export default function Header() {
       <div className="w-full h-[80px] z-40 absolute pl-8 pr-8 display1:pl-4 display1:pr-4">
         <div className="max-w-[1700px] w-full h-full flex justify-between items-center m-auto">
           <div className="w-max h-max flex items-center">
-            <div className="w-[50px] h-[50px] rounded-full mr-4 bg-[url('/perfil.jpeg')] bg-cover "></div>
+            <div className="w-[50px] h-[50px] rounded-full bg-[url('/assets/avatar.png')] mr-4 -rotate-6 bg-top bg-cover "></div>
             <span className="text-white  font-sans leading-none text-lg">
               Mateus
             </span>
