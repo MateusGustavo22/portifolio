@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head >
-        <title>Mateus Gustavo | Portifólio</title>
+        <title>Mateus Gustavo || Portifólio</title>
       </Head>
       <Header />
       <InitialSection />
