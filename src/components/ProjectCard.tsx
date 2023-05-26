@@ -44,7 +44,7 @@ export default function ProjectCard({
           <div className="w-full h-max space-y-4">
             <div className="max-w-[370px] h-max flex flex-wrap">
               {tags.map(item => (
-                <Tag text={item} />
+                <Tag key={item} text={item} />
               ))}
             </div>
             <div className="w-full h-max flex space-x-2">
