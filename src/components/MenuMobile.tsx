@@ -21,15 +21,14 @@ export default function MenuMobile({ setShowMenu, right, menuRef }: Props) {
         className="text-white cursor-pointer hover:text-color2"
       />
       <div className="w-max h-max  m-auto items-center flex flex-col space-y-[64px]">
-        <Link
-          to="home"
-          smooth={true}
-          duration={500}
+        <a
+          href="/curriculo01.pdf"
+          download
           onClick={() => setShowMenu(-300)}
           className="w-max text-white cursor-pointer hover:text-color2 font-sans text-xl"
         >
-          Inicio
-        </Link>
+          Currículo
+        </a>
         <Link
           to="projects"
           smooth={true}

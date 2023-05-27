@@ -67,10 +67,10 @@ export default function Header() {
             </span>
           </div>
           <div className="w-max h-full flex items-center display1:hidden space-x-10">
-            <span className="group cursor-pointer text-white h-full relative flex items-center border-transparent text-lg font-sans">
-              Inicio
+            <a href="/curriculo01.pdf" download className="group cursor-pointer text-white h-full relative flex items-center border-transparent text-lg font-sans">
+              Currículo
               <div className="w-0 h-[2px] group-hover:w-full transition-all duration-300 absolute bottom-0 bg-color2"></div>
-            </span>
+            </a>
             <Link
               to="projects"
               smooth={true}
