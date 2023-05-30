@@ -14,7 +14,7 @@ export default function InitialSection() {
                 Mateus Gustavo
               </h1>
               <h3 className="text-center text-xl display1:text-lg text-white font-sans ">
-                FRONT END DEVELOPER 👨🏻‍💻
+                FRONTEND DEVELOPER 👨🏻‍💻
               </h3>
               <div className="max-w-[590px] h-max">
                 <p className="text-center w-full  break-words text-lg display1:text-base font-sans text-white">
