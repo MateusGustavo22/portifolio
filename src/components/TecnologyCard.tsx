@@ -5,12 +5,12 @@ interface Props {
 
 export default function TecnologyCard({ icon, name }: Props) {
   return (
-    <div className="w-[120px] h-[120px] display1:w-[90px] display1:h-[90px] mr-4 mb-4 flex flex-col space-y-4 display1:space-y-2 justify-center items-center rounded-md bg-[#313E57]">
+    <div className="mb-4 mr-4 flex h-[120px] w-[120px] flex-col items-center justify-center space-y-4 rounded-md bg-[#313E57] display1:h-[90px] display1:w-[90px] display1:space-y-2">
       <div
         style={{ backgroundImage: `url(${icon})` }}
-        className={`w-[40px] h-[40px] display1:w-[30px] display1:h-[30px] bg-cover bg-center`}
+        className={`h-[40px] w-[40px] bg-cover bg-center display1:h-[30px] display1:w-[30px]`}
       ></div>
-      <span className="text-[#CBCBCB] display1:text-[0.75rem] text-sm font-sans">{name}</span>
+      <span className="font-sans text-sm text-[#CBCBCB] display1:text-[0.75rem]">{name}</span>
     </div>
   );
 }

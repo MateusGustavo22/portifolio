@@ -1,8 +1,8 @@
-"use client";
-import MenuMobile from "./MenuMobile";
-import { useState, useRef, useEffect } from "react";
-import { Link } from "react-scroll";
-import { AiOutlineArrowUp } from "react-icons/ai";
+'use client';
+import MenuMobile from './MenuMobile';
+import { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-scroll';
+import { AiOutlineArrowUp } from 'react-icons/ai';
 
 export default function Header() {
   const menuButton = useRef<HTMLButtonElement>(null);
@@ -15,10 +15,7 @@ export default function Header() {
     function handleClickOutside(event: MouseEvent): void {
       if (menuRef.current && menuRef.current.contains(event.target as Node)) {
         return;
-      } else if (
-        menuButton.current &&
-        menuButton.current.contains(event.target as Node)
-      ) {
+      } else if (menuButton.current && menuButton.current.contains(event.target as Node)) {
         showMenu === -300 ? setShowMenu(0) : setShowMenu(-300);
       } else {
         setShowMenu(-300);
@@ -26,16 +23,16 @@ export default function Header() {
     }
 
     if (showMenu === 0) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = "visible";
+      document.body.style.overflow = 'visible';
     }
 
-    document.body.addEventListener("click", handleClickOutside);
+    document.body.addEventListener('click', handleClickOutside);
 
     return () => {
-      document.body.removeEventListener("click", handleClickOutside);
-      document.body.removeEventListener("click", handleClickOutside);
+      document.body.removeEventListener('click', handleClickOutside);
+      document.body.removeEventListener('click', handleClickOutside);
     };
   }, [showMenu]);
 
@@ -49,59 +46,61 @@ export default function Header() {
       }
     }
 
-    document.addEventListener("scroll", scrollToTop);
+    document.addEventListener('scroll', scrollToTop);
 
     return () => {
-      document.removeEventListener("scroll", scrollToTop);
+      document.removeEventListener('scroll', scrollToTop);
     };
   }, [scrolled]);
 
   return (
-    <div className="w-full h-max pt-4 display1:pt-0 absolute">
-      <div className="w-full h-[80px] z-40 absolute pl-8 pr-8 display1:pl-4 display1:pr-4">
-        <div className="max-w-[1700px] w-full h-full flex justify-between items-center m-auto">
-          <div className="w-max h-max flex items-center">
-            <div className="w-[50px] h-[50px] rounded-full bg-[url('/assets/avatar.png')] mr-4 -rotate-6 bg-top bg-cover "></div>
-            <span className="text-white  font-sans leading-none text-lg">
-              Mateus
-            </span>
+    <div className="absolute h-max w-full pt-4 display1:pt-0">
+      <div className="absolute z-40 h-[80px] w-full pl-8 pr-8 display1:pl-4 display1:pr-4">
+        <div className="m-auto flex h-full w-full max-w-[1700px] items-center justify-between">
+          <div className="flex h-max w-max items-center">
+            <div className="mr-4 h-[50px] w-[50px] -rotate-6 rounded-full bg-[url('/assets/avatar.png')] bg-cover bg-top "></div>
+            <span className="font-sans  text-lg leading-none text-white">Mateus</span>
           </div>
-          <div className="w-max h-full flex items-center display1:hidden space-x-10">
-            <a href="/curriculo01.pdf" download className="group cursor-pointer text-white h-full relative flex items-center border-transparent text-lg font-sans">
+          <div className="flex h-full w-max items-center space-x-10 display1:hidden">
+            <a
+              href="/curriculo01.pdf"
+              download
+              className="group relative flex h-full cursor-pointer items-center border-transparent font-sans text-lg text-white"
+            >
               Currículo
-              <div className="w-0 h-[2px] group-hover:w-full transition-all duration-300 absolute bottom-0 bg-color2"></div>
+              <div className="absolute bottom-0 h-[2px] w-0 bg-color2 transition-all duration-300 group-hover:w-full"></div>
             </a>
             <Link
               to="projects"
               smooth={true}
               duration={500}
-              className="group group cursor-pointer text-white h-full relative flex items-center border-transparent text-lg font-sans"
+              className="group group relative flex h-full cursor-pointer items-center border-transparent font-sans text-lg text-white"
             >
               Projetos
-              <div className="w-0 h-[2px] group-hover:w-full transition-all duration-300 absolute bottom-0 bg-color2"></div>
+              <div className="absolute bottom-0 h-[2px] w-0 bg-color2 transition-all duration-300 group-hover:w-full"></div>
             </Link>
             <Link
               to="about"
               smooth={true}
               duration={500}
-              className="group cursor-pointer text-white h-full relative flex items-center border-transparent text-lg font-sans"
+              className="group relative flex h-full cursor-pointer items-center border-transparent font-sans text-lg text-white"
             >
               Sobre
-              <div className="w-0 h-[2px] group-hover:w-full transition-all duration-300 absolute bottom-0 bg-color2"></div>
+              <div className="absolute bottom-0 h-[2px] w-0 bg-color2 transition-all duration-300 group-hover:w-full"></div>
             </Link>
             <Link
               to="contact"
               smooth={true}
               duration={500}
-              className="group cursor-pointer text-white h-full relative flex items-center border-transparent text-lg font-sans"
+              className="group relative flex h-full cursor-pointer items-center border-transparent font-sans text-lg text-white"
             >
               Contato
-              <div className="w-0 h-[2px] group-hover:w-full transition-all duration-300 absolute bottom-0 bg-color2"></div>
+              <div className="absolute bottom-0 h-[2px] w-0 bg-color2 transition-all duration-300 group-hover:w-full"></div>
             </Link>
           </div>
           <button
             ref={menuButton}
-            className="group w-[26px] h-[20px] cursor-pointer hidden display1:flex flex-col justify-between"
+            className="group hidden h-[20px] w-[26px] cursor-pointer flex-col justify-between display1:flex"
           >
             <div className="w-full border-[1px] border-white group-hover:border-color2"></div>
             <div className="w-full border-[1px] border-white group-hover:border-color2"></div>
@@ -109,23 +108,16 @@ export default function Header() {
           </button>
         </div>
       </div>
-      <MenuMobile
-        menuRef={menuRef}
-        right={showMenu}
-        setShowMenu={setShowMenu}
-      />
+      <MenuMobile menuRef={menuRef} right={showMenu} setShowMenu={setShowMenu} />
       <Link
         to="home"
         smooth={true}
         duration={500}
-        className={`w-[46px] h-[46px] cursor-pointer z-50 group hover:bg-color2 flex items-center justify-center rounded-full ${
-          scrolled ? "fixed" : "hidden"
-        } right-0 mb-4 mr-4 bottom-0 bg-[#ffffff94]`}
+        className={`group z-50 flex h-[46px] w-[46px] cursor-pointer items-center justify-center rounded-full hover:bg-color2 ${
+          scrolled ? 'fixed' : 'hidden'
+        } bottom-0 right-0 mb-4 mr-4 bg-[#ffffff94]`}
       >
-        <AiOutlineArrowUp
-          size={26}
-          className="text-black group-hover:text-white"
-        />
+        <AiOutlineArrowUp size={26} className="text-black group-hover:text-white" />
       </Link>
     </div>
   );

@@ -1,6 +1,6 @@
-import { BsXLg } from "react-icons/bs";
-import { Link } from "react-scroll";
-import React, { RefObject } from "react";
+import { BsXLg } from 'react-icons/bs';
+import { Link } from 'react-scroll';
+import React, { RefObject } from 'react';
 
 interface Props {
   setShowMenu: (height: number) => void;
@@ -13,19 +13,15 @@ export default function MenuMobile({ setShowMenu, right, menuRef }: Props) {
     <div
       ref={menuRef}
       style={{ right: right }}
-      className="w-[300px] h-screen fixed z-50 transition-all duration-500 items-end pt-[32px] pb-[64px] pl-8 pr-8 bg-[#0a0808b0] backdrop-blur-xl flex flex-col space-y-[64px] "
+      className="fixed z-50 flex h-screen w-[300px] flex-col items-end space-y-[64px] bg-[#0a0808b0] pb-[64px] pl-8 pr-8 pt-[32px] backdrop-blur-xl transition-all duration-500 "
     >
-      <BsXLg
-        onClick={() => setShowMenu(-300)}
-        size={32}
-        className="text-white cursor-pointer hover:text-color2"
-      />
-      <div className="w-max h-max  m-auto items-center flex flex-col space-y-[64px]">
+      <BsXLg onClick={() => setShowMenu(-300)} size={32} className="cursor-pointer text-white hover:text-color2" />
+      <div className="m-auto flex  h-max w-max flex-col items-center space-y-[64px]">
         <a
           href="/curriculo01.pdf"
           download
           onClick={() => setShowMenu(-300)}
-          className="w-max text-white cursor-pointer hover:text-color2 font-sans text-xl"
+          className="w-max cursor-pointer font-sans text-xl text-white hover:text-color2"
         >
           Currículo
         </a>
@@ -34,7 +30,7 @@ export default function MenuMobile({ setShowMenu, right, menuRef }: Props) {
           smooth={true}
           duration={500}
           onClick={() => setShowMenu(-300)}
-          className="w-max text-white cursor-pointer text-center hover:text-color2 font-sans text-xl"
+          className="w-max cursor-pointer text-center font-sans text-xl text-white hover:text-color2"
         >
           Projetos
         </Link>
@@ -43,7 +39,7 @@ export default function MenuMobile({ setShowMenu, right, menuRef }: Props) {
           smooth={true}
           duration={500}
           onClick={() => setShowMenu(-300)}
-          className="w-max text-white cursor-pointer hover:text-color2 font-sans text-xl"
+          className="w-max cursor-pointer font-sans text-xl text-white hover:text-color2"
         >
           Sobre
         </Link>
@@ -52,7 +48,7 @@ export default function MenuMobile({ setShowMenu, right, menuRef }: Props) {
           smooth={true}
           duration={500}
           onClick={() => setShowMenu(-300)}
-          className="w-max text-white cursor-pointer hover:text-color2 font-sans text-xl"
+          className="w-max cursor-pointer font-sans text-xl text-white hover:text-color2"
         >
           Contato
         </Link>

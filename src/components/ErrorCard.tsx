@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 interface Props {
   contactStatus: string;
@@ -7,35 +7,30 @@ interface Props {
 
 export default function ErrorCard({ contactStatus, setContactStatus }: Props) {
   useEffect(() => {
-    if (contactStatus === "OK" || contactStatus === "ERROR") {
-      document.body.style.overflow = "hidden";
+    if (contactStatus === 'OK' || contactStatus === 'ERROR') {
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = 'auto';
     }
   }, [contactStatus]);
 
   function closeConfirmCard() {
-    setContactStatus("");
+    setContactStatus('');
   }
 
   return (
     <div
-      className={`w-full h-screen  ${
-        contactStatus === "ERROR" ? "flex" : "hidden"
-      } fixed top-0 flex items-center justify-center z-50 p-1 backdrop-blur-sm bg-[#ffffff1c]`}
+      className={`h-screen w-full  ${
+        contactStatus === 'ERROR' ? 'flex' : 'hidden'
+      } fixed top-0 z-50 flex items-center justify-center bg-[#ffffff1c] p-1 backdrop-blur-sm`}
     >
-      <div className="max-w-[320px] flex space-y-6 rounded-2xl flex-col items-center w-full p-8 shadow-3xl  bg-color5">
-        <div className="w-20 h-20 mb-4 bg-[url('/assets/error.svg')] bg-center bg-cover bg-no-repeat "></div>
-        <span className="font-sans text-center font-semibold text-white text-2xl">
-          O ENVIO FALHOU!
-        </span>
-        <span className="font-sans text-center text-slate-300">
+      <div className="flex w-full max-w-[320px] flex-col items-center space-y-6 rounded-2xl bg-color5 p-8  shadow-3xl">
+        <div className="mb-4 h-20 w-20 bg-[url('/assets/error.svg')] bg-cover bg-center bg-no-repeat "></div>
+        <span className="text-center font-sans text-2xl font-semibold text-white">O ENVIO FALHOU!</span>
+        <span className="text-center font-sans text-slate-300">
           Por favor, verifique se você preencheu os campos corretamente.
         </span>
-        <button
-          onClick={closeConfirmCard}
-          className="w-full p-2 bg-[#fa5252] text-white font-bold hover:bg-[#bf3f3f]"
-        >
+        <button onClick={closeConfirmCard} className="w-full bg-[#fa5252] p-2 font-bold text-white hover:bg-[#bf3f3f]">
           OK
         </button>
       </div>
