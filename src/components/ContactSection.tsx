@@ -1,7 +1,6 @@
 'use client';
-import Image from 'next/image';
 import { BsLinkedin, BsBoxArrowInUpRight, BsSend } from 'react-icons/bs';
-import { set, useForm } from 'react-hook-form';
+import {  useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import emailjs from '@emailjs/browser';
