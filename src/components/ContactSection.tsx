@@ -91,7 +91,7 @@ export default function ContactSection() {
               />
               {errors.email && <span className="font-sans text-sm text-red-500">{errors.email.message}</span>}
               <label htmlFor="message" className="w-full font-sans text-lg text-[#b8b7b7]">
-                Mesagem
+                Mensagem
               </label>
               {errors.email && <span className="font-sans text-sm text-red-500">{errors.message?.message}</span>}
               <textarea
