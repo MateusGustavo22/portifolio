@@ -63,7 +63,8 @@ export default function Header() {
           </div>
           <div className="flex h-full w-max items-center space-x-10 display1:hidden">
             <a
-              href="/curriculo01.pdf"
+              href="/Mateus_Gustavo
+              .pdf"
               download
               className="group relative flex h-full cursor-pointer items-center border-transparent font-sans text-lg text-white"
             >
