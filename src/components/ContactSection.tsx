@@ -1,6 +1,6 @@
 'use client';
 import { BsLinkedin, BsBoxArrowInUpRight, BsSend } from 'react-icons/bs';
-import {  useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import emailjs from '@emailjs/browser';
@@ -64,7 +64,7 @@ export default function ContactSection() {
         <span className="block text-center font-sans text-4xl font-bold text-white display1:text-2xl">
           Vamos trabalhar juntos 🚀
         </span>
-        <div className="pace-y-[40px] m-auto grid  h-max w-full max-w-[500px] rounded-[15px] border-2 border-white p-8 backdrop-blur-xl">
+        <div className="pace-y-[40px] m-auto grid h-max w-full max-w-[500px] rounded-[15px] border-2 border-white p-8 backdrop-blur-xl display1:pl-4 display1:pr-4">
           <span className="mb-4 font-sans text-2xl font-bold text-white">Entrar em contato</span>
           <div className="grid h-max w-full justify-items-center space-y-6">
             <form onSubmit={handleSubmit(submitContact)} className="flex w-full flex-col space-y-4">
