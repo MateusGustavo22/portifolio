@@ -21,8 +21,8 @@ export default function AboutSection() {
               <TecnologyCard icon="/skills-icons/react.svg" name="react" />
               <TecnologyCard icon="/skills-icons/typescript.svg" name="typescript" />
               <TecnologyCard icon="/skills-icons/next.svg" name="Next" />
+              <TecnologyCard icon="/skills-icons/figma.svg" name="Figma" />
               <TecnologyCard icon="/skills-icons/tailwind.svg" name="Tailwind" />
-              <TecnologyCard icon="/skills-icons/sass.svg" name="Sass" />
               <TecnologyCard icon="/skills-icons/git.svg" name="Git" />
               <TecnologyCard icon="/skills-icons/linux.svg" name="Linux" />
             </div>
