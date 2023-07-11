@@ -16,8 +16,7 @@ export default function InitialSection() {
               <h3 className="text-center font-sans text-xl text-white display1:text-lg ">FRONTEND DEVELOPER 👨🏻‍💻</h3>
               <div className="h-max max-w-[590px]">
                 <p className="w-full break-words  text-center font-sans text-lg text-white display1:text-base">
-                  Eu desenvolvo interfaces de alta qualidade, que são responsivas e possuem a performance necessária
-                  para proporcionar uma excelente experiência ao usuário.{' '}
+                  Eu desenvolvo interfaces de alta qualidade que são bonitas e responsivas para proporcionar uma ótima experiência ao usuário.
                 </p>
               </div>
             </div>
