@@ -9,10 +9,12 @@ module.exports = {
     extend: {
       screens: {
         display1: { max: "630px" },
-        display2: { max: "1172px" }
+        display2: { max: "1172px" },
+        display3: { min: "1080px" }
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"]
+        sans: ["Inter", "sans-serif"],
+        title: ["Black Han Sans", "sans-serif"]
       },
       boxShadow: {
         "3xl": "0px 0px 30px rgba(0, 0, 0, 0.12)"

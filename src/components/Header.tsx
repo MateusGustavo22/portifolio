@@ -54,14 +54,14 @@ export default function Header() {
   }, [scrolled]);
 
   return (
-    <div className="absolute h-max w-full pt-4 display1:pt-0">
-      <div className="absolute z-40 h-[80px] w-full pl-8 pr-8 display1:pl-4 display1:pr-4">
-        <div className="m-auto flex h-full w-full max-w-[1700px] items-center justify-between">
+   
+      <div className="absolute bg-red-400 z-40 h-[80px] w-full pl-8 pr-8 display1:pl-4 display1:pr-4">
+        <div className="m-auto bg-blue-400 flex h-full w-full max-w-[1700px] items-center justify-between">
           <div className="flex h-max w-max items-center">
             <div className="mr-4 h-[50px] w-[50px] -rotate-6 rounded-full bg-[url('/assets/avatar.png')] bg-cover bg-top "></div>
-            <span className="font-sans  text-lg leading-none text-white">Mateus</span>
+            <span className="font-sans text-lg leading-none text-white">Mateus</span>
           </div>
-          <div className="flex h-full w-max items-center space-x-10 display1:hidden">
+          <div className="flex h-full w-max items-center gap-10 display1:hidden">
             <a
               href="/Mateus_Gustavo
               .pdf"
@@ -108,7 +108,6 @@ export default function Header() {
             <div className="w-full border-[1px] border-white group-hover:border-color2"></div>
           </button>
         </div>
-      </div>
       <MenuMobile menuRef={menuRef} right={showMenu} setShowMenu={setShowMenu} />
       <Link
         to="home"
