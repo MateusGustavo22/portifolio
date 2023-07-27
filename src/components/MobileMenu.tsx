@@ -1,10 +1,10 @@
-import { BsXLg } from 'react-icons/bs';
-import { Link } from 'react-scroll';
-import React from 'react';
+import { BsXLg } from 'react-icons/bs'
+import { Link } from 'react-scroll'
+import React from 'react'
 
 interface MobileMenuProps {
-  active: number;
-  closeMobileMenu: () => void;
+  active: number
+  closeMobileMenu: () => void
 }
 
 export default function MobileMenu({ active, closeMobileMenu }: MobileMenuProps) {
@@ -48,5 +48,5 @@ export default function MobileMenu({ active, closeMobileMenu }: MobileMenuProps)
         </Link>
       </div>
     </div>
-  );
+  )
 }

@@ -1,14 +1,14 @@
-'use client';
-import { useState } from 'react';
-import { Link } from 'react-scroll';
-import MobileMenu from './MobileMenu';
-import MenuButton from './MenuButton';
+'use client'
+import { useState } from 'react'
+import { Link } from 'react-scroll'
+import MobileMenu from './MobileMenu'
+import MenuButton from './MenuButton'
 
 export default function Header() {
-  const [showMenu, setShowMenu] = useState(-300);
+  const [showMenu, setShowMenu] = useState(-300)
 
   function closeMobileMenu() {
-    setShowMenu(-300);
+    setShowMenu(-300)
   }
 
   return (
@@ -60,5 +60,5 @@ export default function Header() {
         <MobileMenu active={showMenu} closeMobileMenu={closeMobileMenu} />
       </div>
     </div>
-  );
+  )
 }

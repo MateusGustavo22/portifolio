@@ -1,8 +1,8 @@
-import { AiOutlineArrowUp } from 'react-icons/ai';
-import { Link } from 'react-scroll';
+import { AiOutlineArrowUp } from 'react-icons/ai'
+import { Link } from 'react-scroll'
 
 interface Props {
-  scrolled: boolean;
+  scrolled: boolean
 }
 
 export default function BackToTopButton({ scrolled }: Props) {
@@ -17,5 +17,5 @@ export default function BackToTopButton({ scrolled }: Props) {
     >
       <AiOutlineArrowUp size={26} className="text-black group-hover:text-white" />
     </Link>
-  );
+  )
 }

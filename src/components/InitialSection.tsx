@@ -1,4 +1,4 @@
-import Button from './Button';
+import Button from './Button'
 
 export default function InitialSection() {
   return (
@@ -10,21 +10,21 @@ export default function InitialSection() {
               Mateus Gustavo
             </h1>
             <h3 className="text-center font-sans text-xl font-semibold text-white display1:text-lg ">
-              FRONTEND DEVELOPER 👨🏻‍💻
+              FRONTEND DEVELOPER 👨🏻‍💻🔥
             </h3>
             <div className="h-max max-w-[590px]">
-              <p className="w-full break-words  text-center font-sans text-xl text-white display1:text-base">
+              <p className="w-full break-words text-center font-sans text-xl text-white display1:text-lg">
                 Eu desenvolvo interfaces de alta qualidade que são bonitas e responsivas para proporcionar uma ótima
                 experiência ao usuário.
               </p>
             </div>
           </div>
-          <div className="m-auto flex w-full max-w-[500px] flex-row gap-4 justify-center display1:flex-wrap">
+          <div className="m-auto flex w-full max-w-[500px] flex-row justify-center gap-4 display1:flex-wrap">
             <Button text="LINKEDIN" type="linkedin" link="https://www.linkedin.com/in/matteus-gustavo/" />
             <Button text="GITHUB" type="github" link="https://github.com/MateusGustavo22" />
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

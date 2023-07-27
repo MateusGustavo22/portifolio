@@ -1,16 +1,16 @@
-'use client';
-import { BsLinkedin } from 'react-icons/bs';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
-import { zodResolver } from '@hookform/resolvers/zod';
-import emailjs from '@emailjs/browser';
-import { useState } from 'react';
-import ConfirmCard from './ConfirmCard';
-import ErrorCard from './ErrorCard';
-import SubmitButton from './SubmitButton';
+'use client'
+import { BsLinkedin } from 'react-icons/bs'
+import { useForm } from 'react-hook-form'
+import { z } from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+import emailjs from '@emailjs/browser'
+import { useState } from 'react'
+import ConfirmCard from './ConfirmCard'
+import ErrorCard from './ErrorCard'
+import SubmitButton from './SubmitButton'
 
 export default function ContactSection() {
-  const [submitStatus, setSubmitStatus] = useState('');
+  const [submitStatus, setSubmitStatus] = useState('')
 
   const contectFormSchema = z.object({
     name: z
@@ -21,15 +21,15 @@ export default function ContactSection() {
           .trim()
           .split(' ')
           .map((word) => {
-            return word[0].toLocaleUpperCase().concat(word.substring(1));
+            return word[0].toLocaleUpperCase().concat(word.substring(1))
           })
-          .join(' ');
+          .join(' ')
       }),
     email: z.string().nonempty('Insira seu e-mail').email('Esse e-mail não é válido').toLowerCase(),
     message: z.string().nonempty('Preencha o campo de mensagem'),
-  });
+  })
 
-  type contactFormData = z.infer<typeof contectFormSchema>;
+  type contactFormData = z.infer<typeof contectFormSchema>
 
   const {
     register,
@@ -37,35 +37,38 @@ export default function ContactSection() {
     formState: { errors },
   } = useForm<contactFormData>({
     resolver: zodResolver(contectFormSchema),
-  });
+  })
 
   function submitContact(data: any) {
     const templateParams = {
       from_name: data.name,
       message: data.message,
       email: data.email,
-    };
+    }
 
-    setSubmitStatus('LOADING');
+    setSubmitStatus('LOADING')
 
     emailjs
       .send('service_n8jocgl', 'template_z14w91k', templateParams, 'T5Jfo1MOuJ9yGkVki')
       .then((reponse) => {
-        setSubmitStatus('OK');
+        setSubmitStatus('OK')
       })
       .catch((error) => {
-        setSubmitStatus('ERROR');
-      });
+        setSubmitStatus('ERROR')
+      })
   }
 
   return (
-    <div id="contact" className="h-full flex flex-col gap-12 pl-4 pr-4 pt-16 pb-16 display1:pt-12 display1:pb-12 w-full bg-color3 justify-center ">
+    <div
+      id="contact"
+      className="flex h-full w-full flex-col justify-center gap-12 bg-color3 pb-16 pl-4 pr-4 pt-16 display1:pb-12 display1:pt-12 "
+    >
       <span className="block text-center font-sans text-4xl font-bold text-white display1:text-3xl">
         Vamos trabalhar juntos 🚀
       </span>
-      <div className="flex flex-col gap-4 m-auto h-max w-full bg-color4 max-w-[500px] rounded-[15px] p-8 display1:pl-5 display1:pr-5">
+      <div className="m-auto flex h-max w-full max-w-[500px] flex-col gap-4 rounded-[15px] bg-color4 p-8 display1:pl-5 display1:pr-5">
         <span className="mb-4 font-sans text-2xl font-bold text-white">Entrar em contato</span>
-        <form onSubmit={handleSubmit(submitContact)} className="flex w-full gap-4 flex-col ">
+        <form onSubmit={handleSubmit(submitContact)} className="flex w-full flex-col gap-4 ">
           <label htmlFor="name" className="w-full font-sans text-lg text-[#b8b7b7]">
             Nome
           </label>
@@ -104,7 +107,7 @@ export default function ContactSection() {
           href="https://www.linkedin.com/in/matteus-gustavo/"
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex m-auto h-max w-max cursor-pointer items-center space-x-2"
+          className="group m-auto flex h-max w-max cursor-pointer items-center space-x-2"
         >
           <BsLinkedin size={20} className="text-[#b8b7b7] group-hover:text-color2" />
           <span className="font-base cursor-pointer font-sans text-base text-[#b8b7b7] group-hover:text-color2">
@@ -115,5 +118,5 @@ export default function ContactSection() {
       <ConfirmCard setSubmitStatus={setSubmitStatus} submitStatus={submitStatus} />
       <ErrorCard setSubmitStatus={setSubmitStatus} submitStatus={submitStatus} />
     </div>
-  );
+  )
 }
