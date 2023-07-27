@@ -19,7 +19,7 @@ export default function InitialSection() {
               </p>
             </div>
           </div>
-          <div className="m-auto flex w-full max-w-[500px] flex-row gap-4 display1:flex-wrap">
+          <div className="m-auto flex w-full max-w-[500px] flex-row gap-4 justify-center display1:flex-wrap">
             <Button text="LINKEDIN" type="linkedin" link="https://www.linkedin.com/in/matteus-gustavo/" />
             <Button text="GITHUB" type="github" link="https://github.com/MateusGustavo22" />
           </div>

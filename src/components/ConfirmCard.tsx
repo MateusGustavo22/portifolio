@@ -1,28 +1,27 @@
 import { useEffect } from 'react';
 
 interface Props {
-  contactStatus: string;
-  setContactStatus: (e: string) => void;
+  submitStatus: string;
+  setSubmitStatus: (e: string) => void;
 }
 
-export default function ConfirmCard({ contactStatus, setContactStatus }: Props) {
+export default function ConfirmCard({ submitStatus, setSubmitStatus }: Props) {
   useEffect(() => {
-    if (contactStatus === 'OK' || contactStatus === 'ERROR') {
+    if (submitStatus === 'OK') {
       document.body.style.overflow = 'hidden';
-    } else {
+    }else {
       document.body.style.overflow = 'auto';
     }
-  }, [contactStatus]);
+  }, [submitStatus]);
 
   function closeConfirmCard() {
-    setContactStatus('');
+    setSubmitStatus('');
   }
 
   return (
     <div
-      className={`h-screen w-full  ${
-        contactStatus === 'OK' ? 'flex' : 'hidden'
-      } fixed top-0 z-50 flex items-center justify-center bg-[#ffffff1c] p-1 backdrop-blur-sm`}
+      className={`h-screen w-full  ${submitStatus === 'OK' ? 'flex' : 'hidden'
+        } fixed top-0 z-50 flex items-center justify-center bg-[#ffffff1c] p-1 backdrop-blur-sm`}
     >
       <div className="flex w-full max-w-[340px] flex-col items-center space-y-6 rounded-2xl bg-color5 p-8  shadow-3xl">
         <div className="mb-4 h-20 w-20 bg-[url('/assets/ok.svg')] bg-cover bg-center bg-no-repeat "></div>
