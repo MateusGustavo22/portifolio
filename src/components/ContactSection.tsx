@@ -65,13 +65,13 @@ export default function ContactSection() {
       </span>
       <div className="flex flex-col gap-4 m-auto h-max w-full bg-color4 max-w-[500px] rounded-[15px] p-8 display1:pl-5 display1:pr-5">
         <span className="mb-4 font-sans text-2xl font-bold text-white">Entrar em contato</span>
-        <form onSubmit={handleSubmit(submitContact)} className="flex w-full  gap-4 flex-col ">
+        <form onSubmit={handleSubmit(submitContact)} className="flex w-full gap-4 flex-col ">
           <label htmlFor="name" className="w-full font-sans text-lg text-[#b8b7b7]">
             Nome
           </label>
           <input
             {...register('name')}
-            className="mt-2 w-full border-b-2 border-[#b8b7b7] bg-transparent pb-2 font-sans text-base text-white outline-none placeholder:text-white focus:border-color2 "
+            className=" w-full border-b-2 border-[#b8b7b7] bg-transparent pb-2 font-sans text-base text-white outline-none placeholder:text-white focus:border-color2 "
             type="text"
             placeholder="Seu nome"
             autoComplete="off"
@@ -82,7 +82,7 @@ export default function ContactSection() {
           </label>
           <input
             {...register('email')}
-            className="mt-2 w-full border-b-2 border-[#b8b7b7] bg-transparent pb-2 font-sans text-base text-white outline-none placeholder:text-white focus:border-color2 "
+            className="w-full border-b-2 border-[#b8b7b7] bg-transparent pb-2 font-sans text-base text-white outline-none placeholder:text-white focus:border-color2 "
             type="text"
             placeholder="Insira seu e-mail para contato"
             autoComplete="off"
@@ -95,7 +95,7 @@ export default function ContactSection() {
           <textarea
             id="text-area"
             {...register('message')}
-            className="placeholder:text-md mt-2 h-[200px] w-full overflow-auto rounded-md border-2 border-b-2 border-white bg-transparent pl-3  pt-3 font-sans text-base text-white outline-none placeholder:text-white focus:border-color2"
+            className="placeholder:text-md  h-[200px] w-full overflow-auto rounded-md border-2 border-b-2 border-white bg-transparent pl-3  pt-3 font-sans text-base text-white outline-none placeholder:text-white focus:border-color2"
             placeholder="Deixe sua mensagem"
           />
           <SubmitButton submitStatus={submitStatus} />

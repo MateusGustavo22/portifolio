@@ -13,7 +13,7 @@ export default function InitialSection() {
               FRONTEND DEVELOPER 👨🏻‍💻
             </h3>
             <div className="h-max max-w-[590px]">
-              <p className="w-full break-words  text-center font-sans text-lg text-white display1:text-base">
+              <p className="w-full break-words  text-center font-sans text-xl text-white display1:text-base">
                 Eu desenvolvo interfaces de alta qualidade que são bonitas e responsivas para proporcionar uma ótima
                 experiência ao usuário.
               </p>

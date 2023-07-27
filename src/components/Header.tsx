@@ -15,7 +15,7 @@ export default function Header() {
     <div className="absolute z-40 mt-4 h-[80px] w-full  pl-8 pr-8 display1:mt-2 display1:pl-4 display1:pr-4">
       <div className="m-auto  flex h-full w-full max-w-[1700px] items-center justify-between">
         <div className="flex h-max w-max items-center">
-          <div className="mr-4 h-[50px] w-[50px] -rotate-6 rounded-full bg-[url('/assets/avatar.png')] bg-cover bg-top "></div>
+          <div className="mr-4 h-[50px] w-[50px] rounded-full bg-[url('/assets/avatar.png')] bg-cover bg-top "></div>
           <span className="font-sans text-lg leading-none text-white">Mateus</span>
         </div>
         <div className="flex h-full w-max items-center gap-10 display1:hidden">
