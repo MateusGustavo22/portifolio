@@ -16,7 +16,7 @@ export default function MobileMenu({ active, closeMobileMenu }: MobileMenuProps)
       <BsXLg onClick={closeMobileMenu} size={32} className="cursor-pointer text-white hover:text-color2" />
       <div className="m-auto flex h-max w-max flex-col items-center space-y-[64px]">
         <a
-          href="/curriculo01.pdf"
+          href={`${process.env.NEXT_PUBLIC_CURRICULO}`}
           download
           className="w-max cursor-pointer font-sans text-xl text-white hover:text-color2"
         >

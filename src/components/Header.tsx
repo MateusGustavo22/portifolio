@@ -20,8 +20,7 @@ export default function Header() {
         </div>
         <div className="flex h-full w-max items-center gap-10 display1:hidden">
           <a
-            href="/Mateus_Gustavo
-              .pdf"
+            href={`${process.env.NEXT_PUBLIC_CURRICULO}`}
             download
             className="group relative flex h-full cursor-pointer items-center border-transparent font-sans text-lg text-white"
           >
