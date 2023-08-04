@@ -8,10 +8,8 @@ export default function AboutSection() {
           <div className="flex h-max w-full flex-col gap-8">
             <span className="font-sans text-4xl font-semibold text-white">Sobre mim 👋</span>
             <p className="font-sans text-lg leading-8 text-[#D7D1D1]">
-              Olá! Sou o Mateus Gustavo, nascido em 2004, e minha curiosidade pelo desenvolvimento de softwares me levou
-              ao vasto mundo da programação. Escolhi me especializar no desenvolvimento de interfaces de usuário, também
-              conhecido como front-end. Investi meu tempo em aprender tecnologias como JavaScript, CSS, ReactJS, entre
-              outras. Com disciplina diária, estudei e apliquei meus conhecimentos em projetos pessoais.
+
+              Olá! Sou o Mateus Gustavo, nascido em 2004, e minha curiosidade pelo desenvolvimento de softwares me levou ao vasto mundo da programação. Escolhi me especializar no desenvolvimento de interfaces de usuário, também conhecido como front-end. Investi meu tempo em aprender tecnologias como JavaScript, CSS, ReactJS, entre outras, e fui aplicando esses conhecimentos em vários projetos.
             </p>
             <span className="font-sans text-4xl font-semibold text-white">Meu objetivo</span>
             <p className="font-sans text-lg leading-8 text-[#D7D1D1]" >
