@@ -4,8 +4,10 @@ interface Props {
 
 export default function Tag({ text }: Props) {
   return (
-    <div className="mb-2 mr-2 h-max w-max rounded-[4px] bg-[#525864] pb-1 pl-2 pr-2 pt-1">
-      <span className="font-sans text-sm font-semibold text-white">{text}</span>
+    <div className="h-max w-max rounded-[4px] bg-gray-600 p-2 pb-[4px] pt-[2px]">
+      <span className="text-center font-nunito text-sm leading-none text-white mobile1:text-xs">
+        {text}
+      </span>
     </div>
   )
 }

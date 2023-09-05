@@ -26,11 +26,16 @@ export default function ErrorCard({ submitStatus, setSubmitStatus }: Props) {
     >
       <div className="flex w-full max-w-[320px] flex-col items-center space-y-6 rounded-2xl bg-color5 p-8  shadow-3xl">
         <div className="mb-4 h-20 w-20 bg-[url('/assets/error.svg')] bg-cover bg-center bg-no-repeat "></div>
-        <span className="text-center font-sans text-2xl font-semibold text-white">O ENVIO FALHOU!</span>
+        <span className="text-center font-sans text-2xl font-semibold text-white">
+          O ENVIO FALHOU!
+        </span>
         <span className="text-center font-sans text-slate-300">
           Ocorreu algum erro ao enviar a mensagem. Por favor, tente novamente.
         </span>
-        <button onClick={closeErrorCard} className="w-full bg-[#fa5252] p-2 font-bold text-white hover:bg-[#bf3f3f]">
+        <button
+          onClick={closeErrorCard}
+          className="w-full bg-[#fa5252] p-2 font-bold text-white hover:bg-[#bf3f3f]"
+        >
           OK
         </button>
       </div>

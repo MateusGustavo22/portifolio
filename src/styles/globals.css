@@ -2,22 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
 /* Estilizando a barra de rolagem */
 body {
-  overflow-y: scroll; 
+  overflow-y: scroll;
 }
 
 body::-webkit-scrollbar {
-  width: 10px; 
+  width: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #1956E5;
+  background-color: #3e46ad;
   border-radius: 25px;
 }
 
 body::-webkit-scrollbar-track {
-  background-color: #0e1013; 
+  background-color: #0e1013;
 }
 
 #text-area {
@@ -25,11 +27,11 @@ body::-webkit-scrollbar-track {
 }
 
 #text-area::-webkit-scrollbar {
-  width: 8px; 
+  width: 8px;
 }
 
 #text-area::-webkit-scrollbar-thumb {
-  background-color: #00AEE5; 
+  background-color: #00AEE5;
   border-radius: 25px;
 }
 

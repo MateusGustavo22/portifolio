@@ -15,7 +15,10 @@ export default function BackToTopButton({ scrolled }: Props) {
         scrolled ? 'fixed' : 'invisible'
       } bottom-0 right-0 mb-4 mr-4 bg-[#ffffff94]`}
     >
-      <AiOutlineArrowUp size={26} className="text-black group-hover:text-white" />
+      <AiOutlineArrowUp
+        size={26}
+        className="text-black group-hover:text-white"
+      />
     </Link>
   )
 }

@@ -7,13 +7,20 @@ interface MobileMenuProps {
   closeMobileMenu: () => void
 }
 
-export default function MobileMenu({ active, closeMobileMenu }: MobileMenuProps) {
+export default function MobileMenu({
+  active,
+  closeMobileMenu,
+}: MobileMenuProps) {
   return (
     <div
       style={{ right: active }}
       className="fixed top-0 z-50 flex h-screen w-[300px] flex-col items-end space-y-[64px] bg-[#0a0808b0] pb-[64px] pl-8 pr-8 pt-[32px] backdrop-blur-xl transition-all duration-500 "
     >
-      <BsXLg onClick={closeMobileMenu} size={32} className="cursor-pointer text-white hover:text-color2" />
+      <BsXLg
+        onClick={closeMobileMenu}
+        size={32}
+        className="cursor-pointer text-white hover:text-color2"
+      />
       <div className="m-auto flex h-max w-max flex-col items-center space-y-[64px]">
         <a
           href={`${process.env.NEXT_PUBLIC_CURRICULO}`}

@@ -25,7 +25,11 @@ export default function ContactSection() {
           })
           .join(' ')
       }),
-    email: z.string().nonempty('Insira seu e-mail').email('Esse e-mail não é válido').toLowerCase(),
+    email: z
+      .string()
+      .nonempty('Insira seu e-mail')
+      .email('Esse e-mail não é válido')
+      .toLowerCase(),
     message: z.string().nonempty('Preencha o campo de mensagem'),
   })
 
@@ -49,10 +53,17 @@ export default function ContactSection() {
     setSubmitStatus('LOADING')
 
     emailjs
-      .send('service_n8jocgl', 'template_z14w91k', templateParams, 'T5Jfo1MOuJ9yGkVki')
+      .send(
+        'service_n8jocgl',
+        'template_z14w91k',
+        templateParams,
+        'T5Jfo1MOuJ9yGkVki',
+      )
+      /* eslint n/handle-callback-err: "error" */
       .then((reponse) => {
         setSubmitStatus('OK')
       })
+      /* eslint n/handle-callback-err: "error" */
       .catch((error) => {
         setSubmitStatus('ERROR')
       })
@@ -63,42 +74,68 @@ export default function ContactSection() {
       id="contact"
       className="flex h-full w-full flex-col justify-center gap-12 bg-color3 pb-16 pl-4 pr-4 pt-16 display1:pb-12 display1:pt-12 "
     >
-      <span className="block text-center font-sans text-4xl font-bold text-white display1:text-3xl">
+      <span className="block text-center font-nunito text-4xl font-bold text-gray-200 display1:text-3xl">
         Vamos trabalhar juntos 🚀
       </span>
-      <div className="m-auto flex h-max w-full max-w-[500px] flex-col gap-4 rounded-[15px] bg-color4 p-8 display1:pl-5 display1:pr-5">
-        <span className="mb-4 font-sans text-2xl font-bold text-white">Entrar em contato</span>
-        <form onSubmit={handleSubmit(submitContact)} className="flex w-full flex-col gap-4 ">
-          <label htmlFor="name" className="w-full font-sans text-lg text-[#b8b7b7]">
+      <div className="m-auto flex h-max w-full max-w-[500px] flex-col gap-4 rounded-[15px] border-[1px] border-gray-600 bg-color4 p-8 display1:pl-5 display1:pr-5">
+        <span className="mb-4 font-nunito text-2xl font-bold text-gray-200">
+          Entrar em contato
+        </span>
+        <form
+          onSubmit={handleSubmit(submitContact)}
+          className="flex w-full flex-col gap-4 "
+        >
+          <label
+            htmlFor="name"
+            className="w-full font-nunito text-lg text-gray-200"
+          >
             Nome
           </label>
           <input
             {...register('name')}
-            className=" w-full border-b-2 border-[#b8b7b7] bg-transparent pb-2 font-sans text-base text-white outline-none placeholder:text-white focus:border-color2 "
+            className=" w-full border-b-2 border-gray-200 bg-transparent pb-2 font-nunito text-base text-gray-300 outline-none placeholder:text-gray-300 focus:border-color2 "
             type="text"
             placeholder="Seu nome"
             autoComplete="off"
           />
-          {errors.email && <span className="font-sans text-sm text-red-500">{errors.name?.message}</span>}
-          <label htmlFor="email" className="relative w-full font-sans text-lg text-[#b8b7b7]">
+          {errors.email && (
+            <span className="font-nunito text-sm text-red-500">
+              {errors.name?.message}
+            </span>
+          )}
+          <label
+            htmlFor="email"
+            className="relative w-full font-nunito text-lg text-gray-200"
+          >
             E-mail
           </label>
           <input
             {...register('email')}
-            className="w-full border-b-2 border-[#b8b7b7] bg-transparent pb-2 font-sans text-base text-white outline-none placeholder:text-white focus:border-color2 "
+            className="w-full border-b-2 border-gray-200 bg-transparent pb-2 font-nunito text-base text-gray-300 outline-none placeholder:text-gray-300 focus:border-color2 "
             type="text"
             placeholder="Insira seu e-mail para contato"
             autoComplete="off"
           />
-          {errors.email && <span className="font-sans text-sm text-red-500">{errors.email.message}</span>}
-          <label htmlFor="message" className="w-full font-sans text-lg text-[#b8b7b7]">
+          {errors.email && (
+            <span className="font-nunito text-sm text-red-500">
+              {errors.email.message}
+            </span>
+          )}
+          <label
+            htmlFor="message"
+            className="w-full font-nunito text-lg text-gray-200"
+          >
             Mensagem
           </label>
-          {errors.email && <span className="font-sans text-sm text-red-500">{errors.message?.message}</span>}
+          {errors.email && (
+            <span className="font-nunito text-sm text-red-500">
+              {errors.message?.message}
+            </span>
+          )}
           <textarea
             id="text-area"
             {...register('message')}
-            className="placeholder:text-md  h-[200px] w-full overflow-auto rounded-md border-2 border-b-2 border-white bg-transparent pl-3  pt-3 font-sans text-base text-white outline-none placeholder:text-white focus:border-color2"
+            className="placeholder:text-md  h-[200px] w-full overflow-auto rounded-md border-2 border-b-2 border-white bg-transparent pl-3  pt-3 font-nunito text-base text-gray-300 outline-none placeholder:text-gray-300 focus:border-color2"
             placeholder="Deixe sua mensagem"
           />
           <SubmitButton submitStatus={submitStatus} />
@@ -109,14 +146,23 @@ export default function ContactSection() {
           rel="noopener noreferrer"
           className="group m-auto flex h-max w-max cursor-pointer items-center space-x-2"
         >
-          <BsLinkedin size={20} className="text-[#b8b7b7] group-hover:text-color2" />
-          <span className="font-base cursor-pointer font-sans text-base text-[#b8b7b7] group-hover:text-color2">
+          <BsLinkedin
+            size={20}
+            className="text-gray-200 group-hover:text-color2"
+          />
+          <span className="font-base cursor-pointer font-nunito text-base text-gray-200 group-hover:text-color2">
             Linkedin
           </span>
         </a>
       </div>
-      <ConfirmCard setSubmitStatus={setSubmitStatus} submitStatus={submitStatus} />
-      <ErrorCard setSubmitStatus={setSubmitStatus} submitStatus={submitStatus} />
+      <ConfirmCard
+        setSubmitStatus={setSubmitStatus}
+        submitStatus={submitStatus}
+      />
+      <ErrorCard
+        setSubmitStatus={setSubmitStatus}
+        submitStatus={submitStatus}
+      />
     </div>
   )
 }

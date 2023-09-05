@@ -16,13 +16,15 @@ export default function Header() {
       <div className="m-auto  flex h-full w-full max-w-[1700px] items-center justify-between">
         <div className="flex h-max w-max items-center">
           <div className="mr-4 h-[50px] w-[50px] rounded-full bg-[url('/assets/avatar.png')] bg-cover bg-top "></div>
-          <span className="font-sans text-lg leading-none text-white">Mateus</span>
+          <span className="font-nunito text-lg leading-none text-gray-300">
+            Mateus
+          </span>
         </div>
         <div className="flex h-full w-max items-center gap-10 display1:hidden">
           <a
             href={`${process.env.NEXT_PUBLIC_CURRICULO}`}
             download
-            className="group relative flex h-full cursor-pointer items-center border-transparent font-sans text-lg text-white"
+            className="group relative flex h-full cursor-pointer items-center border-transparent font-nunito text-lg text-gray-300"
           >
             Currículo
             <div className="absolute bottom-0 h-[2px] w-0 bg-color2 transition-all duration-300 group-hover:w-full"></div>
@@ -31,7 +33,7 @@ export default function Header() {
             to="projects"
             smooth={true}
             duration={500}
-            className="group group relative flex h-full cursor-pointer items-center border-transparent font-sans text-lg text-white"
+            className="group relative flex  h-full cursor-pointer items-center border-transparent font-nunito text-lg text-gray-300"
           >
             Projetos
             <div className="absolute bottom-0 h-[2px] w-0 bg-color2 transition-all duration-300 group-hover:w-full"></div>
@@ -40,7 +42,7 @@ export default function Header() {
             to="about"
             smooth={true}
             duration={500}
-            className="group relative flex h-full cursor-pointer items-center border-transparent font-sans text-lg text-white"
+            className="group relative flex h-full cursor-pointer items-center border-transparent font-nunito text-lg text-gray-300"
           >
             Sobre
             <div className="absolute bottom-0 h-[2px] w-0 bg-color2 transition-all duration-300 group-hover:w-full"></div>
@@ -49,7 +51,7 @@ export default function Header() {
             to="contact"
             smooth={true}
             duration={500}
-            className="group relative flex h-full cursor-pointer items-center border-transparent font-sans text-lg text-white"
+            className="group relative flex h-full cursor-pointer items-center border-transparent font-nunito text-lg text-gray-300"
           >
             Contato
             <div className="absolute bottom-0 h-[2px] w-0 bg-color2 transition-all duration-300 group-hover:w-full"></div>
