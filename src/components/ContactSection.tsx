@@ -93,7 +93,7 @@ export default function ContactSection() {
           </label>
           <input
             {...register('name')}
-            className=" w-full border-b-2 border-gray-200 bg-transparent pb-2 font-nunito text-base text-gray-300 outline-none placeholder:text-gray-300 focus:border-color2 "
+            className=" w-full border-b-2 border-gray-400 bg-transparent pb-2 font-nunito text-base text-gray-300 outline-none placeholder:text-gray-300 focus:border-color2 "
             type="text"
             placeholder="Seu nome"
             autoComplete="off"
@@ -111,7 +111,7 @@ export default function ContactSection() {
           </label>
           <input
             {...register('email')}
-            className="w-full border-b-2 border-gray-200 bg-transparent pb-2 font-nunito text-base text-gray-300 outline-none placeholder:text-gray-300 focus:border-color2 "
+            className="w-full border-b-2 border-gray-400 bg-transparent pb-2 font-nunito text-base text-gray-300 outline-none placeholder:text-gray-300 focus:border-color2 "
             type="text"
             placeholder="Insira seu e-mail para contato"
             autoComplete="off"
@@ -135,7 +135,7 @@ export default function ContactSection() {
           <textarea
             id="text-area"
             {...register('message')}
-            className="placeholder:text-md  h-[200px] w-full overflow-auto rounded-md border-2 border-b-2 border-white bg-transparent pl-3  pt-3 font-nunito text-base text-gray-300 outline-none placeholder:text-gray-300 focus:border-color2"
+            className="placeholder:text-md  h-[200px] w-full overflow-auto rounded-md border-2 border-b-2 border-gray-400 bg-transparent pl-3  pt-3 font-nunito text-base text-gray-300 outline-none placeholder:text-gray-300 focus:border-color2"
             placeholder="Deixe sua mensagem"
           />
           <SubmitButton submitStatus={submitStatus} />

@@ -18,7 +18,7 @@ export default function ProjectCard({
   github,
 }: projectCardProps) {
   return (
-    <div className="flex h-max w-full max-w-[600px] flex-col justify-between rounded-lg border-[1px] border-gray-600 bg-color4 p-4 mobile1:p-3">
+    <div className="flex h-max w-full max-w-[600px] flex-col justify-between gap-2 rounded-lg border-[1px] border-gray-600 bg-color4 p-4 mobile1:p-3">
       <Image
         width={1280}
         height={720}
@@ -26,13 +26,10 @@ export default function ProjectCard({
         alt="Foto do projeto"
         className="aspect-[558/364]"
       />
-      <div className="flex h-max w-full flex-col gap-3">
-        <div className="flex h-max w-full flex-col gap-3 pb-4 pr-8 pt-4">
-          <span className=" font-nunito text-3xl font-medium text-gray-300  mobile1:text-2xl">
-            {name}
-          </span>
-        </div>
-
+      <div className="flex h-max w-full flex-col gap-6">
+        <span className=" font-nunito text-3xl font-medium text-gray-300  mobile1:text-2xl">
+          {name}
+        </span>
         <div className="flex h-max w-full flex-col gap-4 ">
           <div className="flex h-max max-w-[370px] flex-wrap gap-2">
             {tags.map((item) => (
